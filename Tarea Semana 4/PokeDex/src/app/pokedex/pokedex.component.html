@@ -1,0 +1,116 @@
+<div class="page-body">
+    <div class="left-side">
+        <div class="logo">
+            <a href="">
+                <img src="../../assets/img/pokemon_logo.png" alt="" width="300px">
+            </a>
+        </div>
+        
+        <div class="form">
+            <input 
+                class="pokemon-input"
+                type="text"
+                name="search"
+                id="search"
+                [(ngModel)]="id_input"
+                placeholder="Ingrese el ID del pokemon">
+        
+            <br>
+        
+            <button class="search-btn" (click)="getPokemon()">
+                Buscar
+            </button>
+        </div>
+
+        <div class="pokeball">
+            <h2>Agregar pokémon</h2>
+            <button class="pokeball-btn" (click)="editPokemon('add')">
+                <img src="../../assets/img/pokeball.png" alt="" width="200px">
+            </button>
+        </div>
+    </div>
+    
+    <div class="right-side">
+        <div class="pokedex">
+            <img src="../../assets/img/pokedex_top.png" alt="">
+            <div class="screen">
+                <div class="info">
+                    <div class="header-info" *ngIf="!freePokemon">
+                        <div class="pkm-img">
+                            <img src="{{ currentPokemon.imagen }}" alt="" *ngIf="!isEditing">
+                            <div class="photo-edit" *ngIf="isEditing">
+                                <p>Foto</p>
+                                <input
+                                    class="photo-input"
+                                    type="text"
+                                    name="photo"
+                                    id="photo"
+                                    [(ngModel)]="templatePokemon.imagen">
+                            </div>
+                        </div>
+                        <div class="id-info">
+                            <p>No.</p>
+                            <p *ngIf="!isEditing">#{{ currentPokemon.nopokedex }}</p>
+                            <input
+                                class="number-input"
+                                type="text"
+                                id="nopokedex"
+                                name="nopokedex"
+                                *ngIf="isEditing"
+                                [(ngModel)]="templatePokemon.nopokedex">
+                        </div>
+                    </div>
+                    <div class="footer-info" *ngIf="!freePokemon">
+                        <h2 *ngIf="!isEditing">{{ currentPokemon.pokemon }}</h2>
+                        <p class="pkmn-label" *ngIf="isEditing">Pokemon</p>
+                        <input
+                            class="pkmn-input"
+                            type="text"
+                            name="pokemon"
+                            id="pokemon"
+                            *ngIf="isEditing"
+                            [(ngModel)]="templatePokemon.pokemon">
+                        <p class="edit-label">Tipo(s)</p>
+                        <p *ngIf="!isEditing">{{ currentPokemon.tipo }}</p>
+                        <input
+                            type="text"
+                            *ngIf="isEditing"
+                            id="tipo"
+                            name="tipo"
+                            [(ngModel)]="templatePokemon.tipo">
+                    </div>
+                    <div *ngIf="freePokemon">
+                        <h2>¿Liberar pokémon?</h2>
+                        <div class="free-pkmn">
+                            <button class="confirm-btn" (click)="deletePokemon()">
+                                Sí :(
+                            </button>
+                            <button class="cancel-btn" (click)="cancelEditing()">
+                                No :)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pokedex-btn" *ngIf="isPokemon || isAdding">
+                    <button (click)="editPokemon('update')" *ngIf="!isEditing && !freePokemon">
+                        Actualizar
+                    </button>
+                    <button (click)="freeingPokemon()" *ngIf="!isEditing && !freePokemon">
+                        Liberar
+                    </button>
+
+                    <button *ngIf="isEditing && isUpdating&& !freePokemon" (click)="updatePokemon()">
+                        Listo
+                    </button>
+                    <button *ngIf="isEditing && isAdding && !freePokemon" (click)="savePokemon()">
+                        Listo
+                    </button>
+                    <button (click)="cancelEditing()" *ngIf="isEditing && !freePokemon">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+            <img src="../../assets/img/pokedex_down.png" alt="">
+        </div>
+    </div>
+</div>

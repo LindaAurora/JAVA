@@ -1,0 +1,38 @@
+.video-player {
+    border: 1px solid black;
+    height: 100vh;
+    width: 100vw;
+}
+
+video {
+    position:relative;
+    top: -12%;
+    left: -5%;
+    height: 130vh;
+}
+
+.buttons {
+    position: absolute;
+    top: 1%;
+    right: 0;
+}
+
+.mute-btn {
+    background-color: transparent;
+    border: none;
+}
+
+.mute-btn img {
+    color: red;
+    cursor: pointer;
+    width: 5vw;
+    height: 5vw;
+}
+
+.pokedex-btn {
+    padding: 10px;
+    font-size: 20px;
+    background-color: white;
+    right: 48vw;
+    position: absolute;
+}

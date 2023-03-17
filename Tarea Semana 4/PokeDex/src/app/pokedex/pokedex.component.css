@@ -1,0 +1,128 @@
+.page-body {
+    display:flex;
+    width: 100%;
+}
+
+.logo {
+    margin: 10px 10px 8% 10px;
+}
+
+.form {
+    padding: 20px;
+}
+
+.search-btn {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 10%;
+    margin-top: 10px;
+    width: 30%;
+}
+
+.pokemon-input {
+    width: 75%;
+    height: 20px;
+    padding: 10px;
+}
+
+.pokeball {
+    margin-top: 30px;
+}
+
+.pokeball-btn {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.left-side {
+    width: 30vw;
+    text-align: center;
+    margin-right: 200px;
+}
+
+.right-side {
+    text-align: center;
+    padding-top: 1vh;
+}
+
+.screen {
+    height: 40vh;
+    background-color: rgb(206, 255, 255);
+    /* width: min-content; */
+    padding: 20px;
+}
+
+.info {
+    border: 2px solid rgb(12, 240, 233);
+    background-color: rgb(21, 174, 222);
+    height: 85%;
+    padding: 2%;
+}
+
+.pokedex-btn button{
+    margin: 10px;
+}
+
+.pkm-img {
+    border: 1px solid black;
+    height: 100px;
+    width: 172px;
+    background-color: white;
+}
+
+.pkm-img img {
+    width: 50%;
+}
+
+.header-info {
+    display: flex;
+}
+
+.id-info {
+    text-align: center;
+    width: 30%;
+}
+
+.footer-info {
+    margin-top: 10px;
+}
+
+.photo-edit {
+    margin-top: 15px;
+}
+
+.photo-input {
+    width: 70%;
+}
+
+.number-input {
+    width: 70px;
+    margin-left: 4px;
+}
+
+.edit-label {
+    margin: 0px;
+}
+
+.pkmn-label {
+    margin: 0px;
+}
+
+.pkmn-input {
+    margin-bottom: 5px;
+}
+
+.free-pkmn button {
+    margin: 10px;
+    padding: 5px;
+}
+
+.confirm-btn {
+    background-color: greenyellow;
+}
+
+.cancel-btn {
+    background-color: red;
+}
