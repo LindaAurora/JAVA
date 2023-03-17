@@ -1,0 +1,19 @@
+<div class="video-player">
+    <video
+        title="ditto"
+        style="background-color: rgb(0, 0, 0); position: absolute;"
+        src="../../assets/video/ditto_video.mp4"
+        autoplay="true"
+        [muted]="isMuted"></video>
+</div>
+
+<div class="buttons">
+    <button class="pokedex-btn" routerLink="pokedex">
+        Ir a la pokédex
+    </button>
+
+    <button class="mute-btn" (click)="toggleMute()">
+        <img src="../../assets/img/volumen-reducido.png" alt="" height="90px" width="150px" *ngIf="!isMuted">
+        <img src="../../assets/img/silencio.png" alt="" height="100px" width="150px" *ngIf="isMuted">
+    </button>
+</div>
